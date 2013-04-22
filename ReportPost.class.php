@@ -26,7 +26,7 @@ class ReportPost
 		$this->last_error = '';
 		$this->totalRows = 0;
 		$this->insert_id=0;
-		$this->parent_prefix = $this->wpdb->base_prefix;
+		$this->parent_prefix = $wpdb->base_prefix;
 	}
 	
 	# Function to Add New Report to Database
@@ -43,7 +43,7 @@ class ReportPost
 		
 		$sql = "SELECT `id` FROM `".$this->parent_prefix."wpreport` WHERE `blogID` = %s AND `postID` = %s AND `status` != 2 LIMIT 1";
 		
-		$sql = $this->wpdb->prepare($sql, $blogID, $postID);
+		$sql = $this->wpdb->prepare($sql, $blog_id, $postID);
 		
 		$reportID = $this->wpdb->get_var($sql);
 		$this->insert_id = $reportID;
