@@ -1,13 +1,6 @@
 <?php
-### Load WP-Config File If This File Is Called Directly
-if (!function_exists('add_action')) {
-	$wp_root = '../../..';
-	if (file_exists($wp_root.'/wp-load.php')) {
-		require_once($wp_root.'/wp-load.php');
-	} else {
-		require_once($wp_root.'/wp-config.php');
-	}
-}
+### Load WordPress required files if called directly
+require_once '../../../wp-load.php';
 
 ### Use WordPress 2.6 Constants
 if (!defined('WP_CONTENT_DIR')) {
