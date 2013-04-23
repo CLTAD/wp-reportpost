@@ -24,8 +24,11 @@ if (!defined('WP_PLUGIN_URL')) {
 }
 
 /* Variables */
-$id = $_GET['id'];
+if (!isset($_GET['id'])){
+	die('Error! No report id.');
+}
 
+$id = $_GET['id'];
 /* Load Reports Class*/
 include_once('ReportPost.class.php');
 

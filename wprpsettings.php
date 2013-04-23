@@ -1,15 +1,17 @@
 <?php
+if (!defined ('ABSPATH')) die ('No direct access allowed');
 /*
 	SETTINGS Options for WP-REPORTPOST
 	V1.2
 */
 
-function getuserinfo(){
-    global $current_user;
-    get_currentuserinfo();
-}
 if( !function_exists( 'add_action' ) ) die('There was a problem loading the user info - please contact the administrator, quoting this message.');
 add_action('init', 'getuserinfo');
+
+function getuserinfo(){
+	global $current_user;
+	get_currentuserinfo();
+}
 				
 ### If Form Is Submitted
 if(isset($_POST['saveChanges'])) {

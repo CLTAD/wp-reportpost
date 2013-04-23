@@ -1,4 +1,6 @@
 <?php
+if (!defined ('ABSPATH')) die ('No direct access allowed');
+
 	// Get the Reports
 	include_once("ReportPost.class.php");
 
