@@ -3,7 +3,7 @@
 Plugin Name: WP-ReportPost
 Description: This multisite specific plugin attaches forms (jQuery / Ajax) to your contents that can be invoked by any end-user to make a report on posts / pages and comments. 
 Report comments and multiuser functionality added by Mike Kelly.
-Version: 1.3.1
+Version: 1.3.2
 Author: Rajeevan, Mike Kelly
 Original Author: Rajeevan 
 Original Author URI: http://ww2.rjeevan.com

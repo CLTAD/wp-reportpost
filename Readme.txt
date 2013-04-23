@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rajee
 Tags: broken link, broken, report, report post, post report, notify, inform, abuse, wp-report, error report
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 
 Simple and powerful plugin to make your life easier, Report post plugin to automate links / contents error reporting in your website.
 
@@ -40,6 +40,8 @@ This Plugin is Ideal for wordpress users who have links to external websites and
 
 == Changelog ==
 
+= 1.3.2 =
+Change the way $wpdb is accessed from the ReportPost class.
 = 1.3.1 = 
 Updated and extended by Mike Kelly to support Wordpress 3.5, multisite installations and reporting on comments.
 
