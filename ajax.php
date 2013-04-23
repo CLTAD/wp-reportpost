@@ -22,7 +22,7 @@ if (!defined('WP_PLUGIN_URL')) {
 ----------------------------------------*/
 function wprp_handle_reports()
 {
-	global $wpdb, $wprp_message, $blog_id;
+	global $wprp_message, $blog_id;
 	
 	// get Post PARAM
 	$post_id=(int)$_POST['postID'];
@@ -53,7 +53,7 @@ function wprp_handle_reports()
 	
 	include_once('ReportPost.class.php');
 	
-	$rp = new ReportPost($wpdb);
+	$rp = new ReportPost();
 	
 	if($rp->add($post_id, $report_as, $description, $comment_id))
 	{

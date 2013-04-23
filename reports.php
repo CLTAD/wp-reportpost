@@ -29,9 +29,7 @@ $id = $_GET['id'];
 /* Load Reports Class*/
 include_once('ReportPost.class.php');
 
-global $wpdb;
-
-$wprp = new ReportPost($wpdb);
+$wprp = new ReportPost();
 
 $report = $wprp->findReports('ORDER BY id DESC',1,"WHERE id=".$id);
 

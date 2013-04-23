@@ -1,9 +1,8 @@
 <?php
 	// Get the Reports
 	include_once("ReportPost.class.php");
-	
-	global $wpdb;
-	$wprp = new ReportPost($wpdb);
+
+	$wprp = new ReportPost();
 	
 	// Handle Archive & DELETE
 	if($_SERVER['REQUEST_METHOD']=='POST')

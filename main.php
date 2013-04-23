@@ -376,10 +376,10 @@ function wprp_admin_menu(){
 
 	if (is_multisite() && is_super_admin()){
 
-		global $wpdb, $wprp;
+		global $wprp;
 
 		if($wprp == NULL){
-			$wprp = new ReportPost($wpdb);
+			$wprp = new ReportPost();
 			$wprp->findReports('ORDER BY id DESC',1,'WHERE status=1');
 		}
 		$newReports = $wprp->totalRows;
@@ -400,10 +400,10 @@ function wprp_admin_menu(){
 # Add Dashboard Widget
 add_action('right_now_table_end', 'wprp_right_now_table_end');
 function wprp_right_now_table_end(){
-	global $wpdb, $wprp;
+	global $wprp;
 	
 	if($wprp == NULL){
-		$wprp = new ReportPost($wpdb);
+		$wprp = new ReportPost();
 		$wprp->findReports('ORDER BY id DESC',1,'WHERE status=1');
 	}
 	

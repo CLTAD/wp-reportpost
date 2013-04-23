@@ -120,7 +120,7 @@ if(isset($_POST['upgrade']))
 	
 	// Call Class
 	include_once('ReportPost.class.php');
-	$wprp = new ReportPost($wpdb);
+	$wprp = new ReportPost();
 	
 	// Disable EMAIL FOR NOW
 	$email_opt = get_site_option("rp_send_email");
